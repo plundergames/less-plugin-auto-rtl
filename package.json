@@ -1,0 +1,20 @@
+{
+  "author": {
+    "name": "Paul Bühler"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "auto adjusts the direction specific styles to the specified direction (e.g. dir=\"rtl\")",
+  "devDependencies": {
+    "less": "^2.4.0"
+  },
+  "licenses": [
+    {
+      "type": "Apache v2",
+      "url": "https://github.com/less/less-plugin-rtl/blob/master/LICENSE"
+    }
+  ],
+  "main": "lib/index.js",
+  "name": "less-plugin-auto-rtl",
+  "version": "1.0.0"
+}
