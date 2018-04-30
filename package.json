@@ -6,7 +6,7 @@
   "deprecated": false,
   "description": "auto adjusts the direction specific styles to the specified direction (e.g. dir=\"rtl\")",
   "devDependencies": {
-    "less": "^2.4.0"
+    "less": "^3.0.0"
   },
   "licenses": [
     {
@@ -16,5 +16,5 @@
   ],
   "main": "lib/index.js",
   "name": "less-plugin-auto-rtl",
-  "version": "1.0.7"
+  "version": "1.0.8"
 }
