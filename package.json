@@ -16,5 +16,5 @@
   ],
   "main": "lib/index.js",
   "name": "less-plugin-auto-rtl",
-  "version": "1.0.6"
+  "version": "1.0.7"
 }
