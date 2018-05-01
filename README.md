@@ -80,9 +80,10 @@ What will be converted?
 | border-top-right-radius: 5px | border-top-left-radius: 5px |
 | border-bottom-left-radius: 5px | border-bottom-right-radius: 5px |
 | border-bottom-right-radius: 5px | border-bottom-left-radius: 5px |
-| left: 5px | right: 5px |
+| box-shadow: 10px 20px | box-shadow: -10px 20px |
 | float: left | float: right |
 | float: right | float: left |
+| left: 5px | right: 5px |
 | margin: 10px 20px 30px 40px | margin: 10px 40px 30px 20px |
 | margin-left: 5px | margin-right: 5px |
 | margin-right: 5px | margin-left: 5px |
