@@ -8,6 +8,13 @@
   "devDependencies": {
     "less": "^3.0.0"
   },
+  "keywords": [
+    "rtl",
+    "less",
+    "plugin",
+    "direction",
+    "ltr"
+  ],
   "license": "Apache-2.0",
   "main": "lib/index.js",
   "name": "less-plugin-auto-rtl",
