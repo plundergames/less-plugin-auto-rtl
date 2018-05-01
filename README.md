@@ -15,7 +15,7 @@ __Use with less:__
 $ lessc --auto-rtl file.less out.css
 ```
 
-__To use with webpack and less-loader:__
+__Use with webpack and less-loader:__
 ```javascript
 // webpack.config.js
 const AutoRtlPlugin = require('less-plugin-auto-rtl');
@@ -96,3 +96,53 @@ What will be converted?
 | transform: translateX (30px) | transform: translateX (-30px) |
 | transform: translate3d (30px, 25px, 20px) | transform: translate3d (-30px, 25px, 20px) |
 
+Specify direction
+-----------
+For single rules you can set a specific direction. Per default, rules for LTR will stay the same and there will an additional rule for RTL added, which is reversed. To create a rule that applies only on LTR or RTL or is in RTL and LTR the same, you have to specify this by a prefix.
+```css
+-ltr-margin-left:5px; // will only applied in dir="ltr"
+-rtl-margin-left:5px; // will only applied in dir="rtl"
+-ltr-rtl-margin-left:5px //rule will be the same in dir="ltr" and dir="rtl"; will not be reversed for dir="rtl"
+```
+
+Conversion Example
+------------
+__Less file:__
+```css
+.test {
+  margin-left: 5px;
+  padding: 10px 20px 30px 40px;
+  text-align: left;
+  transform: translate (30px, 10px);
+  -rtl-left: 10px;
+  -rtl-ltr-border-color: yellow green blue red;
+}
+```
+
+__Output css:__
+```css
+.test {
+  margin-left: 5px;
+  padding: 10px 20px 30px 40px;
+  text-align: left;
+  transform: translate(30px, 10px);
+  border-color: yellow green blue red;
+}
+[dir="rtl"] .test,
+:host-context([dir="rtl"]) .test {
+  margin-left: initial;
+  margin-right: 5px;
+  padding: 10px 40px 30px 20px;
+  text-align: right;
+  transform: translate(-30px, 10px);
+  left: 10px;
+}
+[dir="ltr"] .test,
+:host-context([dir="ltr"]) .test {
+  margin-right: initial;
+  margin-left: 5px;
+  padding: 10px 20px 30px 40px;
+  text-align: left;
+  transform: translate(30px, 10px);
+}
+```
