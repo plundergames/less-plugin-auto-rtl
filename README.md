@@ -63,3 +63,36 @@ __Use the RTL styling and exclude some parts:__
 
 What will be converted?
 -------
+| Rule          |RTL Rule       |
+| ------------- |-------------|
+| border-color: yellow green blue red | border-color: yellow red blue green |
+| border-left: 5px solid red | border-right: 5px solid red |
+| border-left-color: green | border-right-color: green |
+| border-left-style: solid | border-right-style: solid |
+| border-left-width: 5px | border-right-width: 5px |
+| border-right: 5px solid red | border-left: 5px solid red |
+| border-right-color: green | border-left-color: green |
+| border-right-style: solid | border-left-style: solid |
+| border-right-width: 5px | border-left-width: 5px |
+| border-style: solid dotted dashed hidden | border-style: solid hidden dashed dotted |
+| border-width: 10px 20px 30px 40px | border-width: 10px 40px 30px 20px |
+| border-top-left-radius: 5px | border-top-right-radius: 5px |
+| border-top-right-radius: 5px | border-top-left-radius: 5px |
+| border-bottom-left-radius: 5px | border-bottom-right-radius: 5px |
+| border-bottom-right-radius: 5px | border-bottom-left-radius: 5px |
+| left: 5px | right: 5px |
+| float: left | float: right |
+| float: right | float: left |
+| margin: 10px 20px 30px 40px | margin: 10px 40px 30px 20px |
+| margin-left: 5px | margin-right: 5px |
+| margin-right: 5px | margin-left: 5px |
+| padding: 10px 20px 30px 40px | padding: 10px 40px 30px 20px |
+| padding-left: 5px | padding-right: 5px |
+| padding-right: 5px | padding-left: 5px |
+| right: 5px | left: 5px |
+| text-align: left | text-align: right |
+| text-align: right | text-align: left |
+| transform: translate(30px, 0) | transform: translate(-30px, 0) |
+| transform: translateX (30px) | transform: translateX (-30px) |
+| transform: translate3d (30px, 25px, 20px) | transform: translate3d (-30px, 25px, 20px) |
+
